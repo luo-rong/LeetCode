@@ -1,3 +1,5 @@
+package _338_CountBits;
+
 public class CountBits {
     public int[] countBits1(int num) {
         int[] result = new int[num + 1];
