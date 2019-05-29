@@ -1,0 +1,81 @@
+[题目描述](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
+
+给定一个二叉树，返回它的中序 遍历。
+
+**注意**
+1. 方法1：递归
+2. 方法2：
+    1. 将节点左子树全部压栈
+    2. 弹出栈顶所有没有右子树的元素并将其加入遍历结果，直到出现右子树
+    3. 若当前元素有右子树，则将当前元素加入遍历结果
+    4. 指向当前节点右子树
+    5. 若当前节点为空，则结束遍历；若当前节点不为空，则继续循环上述操作
+3. 方法3：
+    1. 将节点左子树全部压栈
+    2. 如果栈不为空则弹出栈顶元素并将其加入遍历结果，指向当前节点右子树
+    3. 若当前节点和栈均为空，则结束遍历；否则继续循环上述操作
+
+```java
+// 方法1
+public class InorderTraversal {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        List<Integer> result = new ArrayList<>();
+        result.addAll(inorderTraversal(root.left));
+        result.add(root.val);
+        result.addAll(inorderTraversal(root.right));
+        return result;
+    }
+}
+```
+
+```java
+// 方法2
+public class InorderTraversal1 {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        Stack<TreeNode> treeNodeStack = new Stack<>();
+        List<Integer> result = new ArrayList<>();
+        TreeNode node = root;
+        while (node != null) {
+            while (node != null) {
+                treeNodeStack.push(node);
+                node = node.left;
+            }
+            while (treeNodeStack.size() > 0 && (node = treeNodeStack.pop()).right == null) {
+                result.add(node.val);
+            }
+            // node不可能为null
+            if (node.right != null) {
+                result.add(node.val);
+            }
+            node = node.right;
+        }
+        return result;
+    }
+}
+```
+
+```java
+// 方法3
+public class inorderTraversal2 {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        Stack<TreeNode> treeNodeStack = new Stack<>();
+        List<Integer> result = new ArrayList<>();
+        TreeNode node = root;
+        while (node != null || !treeNodeStack.isEmpty()) {
+            while (node != null) {
+                treeNodeStack.push(node);
+                node = node.left;
+            }
+            if (!treeNodeStack.isEmpty()) {
+                node = treeNodeStack.pop();
+                result.add(node.val);
+                node = node.right;
+            }
+        }
+        return result;
+    }
+}
+```
