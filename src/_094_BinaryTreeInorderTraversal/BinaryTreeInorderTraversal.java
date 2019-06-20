@@ -1,4 +1,4 @@
-package _094_InorderTraversal;
+package _094_BinaryTreeInorderTraversal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 递归算法
  */
-public class InorderTraversal {
+public class BinaryTreeInorderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();
