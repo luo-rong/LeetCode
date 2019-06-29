@@ -37,20 +37,20 @@ public class InorderTraversal1 {
     public List<Integer> inorderTraversal(TreeNode root) {
         Stack<TreeNode> treeNodeStack = new Stack<>();
         List<Integer> result = new ArrayList<>();
-        TreeNode node = root;
-        while (node != null) {
-            while (node != null) {
-                treeNodeStack.push(node);
-                node = node.left;
+        TreeNode point = root;
+        while (point != null) {
+            while (point != null) {
+                treeNodeStack.push(point);
+                point = point.left;
             }
-            while (treeNodeStack.size() > 0 && (node = treeNodeStack.pop()).right == null) {
-                result.add(node.val);
+            while (treeNodeStack.size() > 0 && (point = treeNodeStack.pop()).right == null) {
+                result.add(point.val);
             }
             // node不可能为null
-            if (node.right != null) {
-                result.add(node.val);
+            if (point.right != null) {
+                result.add(point.val);
             }
-            node = node.right;
+            point = point.right;
         }
         return result;
     }
@@ -63,16 +63,16 @@ public class inorderTraversal2 {
     public List<Integer> inorderTraversal(TreeNode root) {
         Stack<TreeNode> treeNodeStack = new Stack<>();
         List<Integer> result = new ArrayList<>();
-        TreeNode node = root;
-        while (node != null || !treeNodeStack.isEmpty()) {
-            while (node != null) {
-                treeNodeStack.push(node);
-                node = node.left;
+        TreeNode point = root;
+        while (point != null || !treeNodeStack.isEmpty()) {
+            while (point != null) {
+                treeNodeStack.push(point);
+                point = point.left;
             }
             if (!treeNodeStack.isEmpty()) {
-                node = treeNodeStack.pop();
-                result.add(node.val);
-                node = node.right;
+                point = treeNodeStack.pop();
+                result.add(point.val);
+                point = point.right;
             }
         }
         return result;
