@@ -1,5 +1,6 @@
 package _289_GameOfLife;
 
+// 原地算法
 public class GameOfLife {
     private static final int DEAD_TO_LIVE_STATUS = 2;
     private static final int LIVE_TO_DEAD_STATUS = 3;
