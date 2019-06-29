@@ -1,10 +1,10 @@
-package _094_InorderTraversal;
+package _094_BinaryTreeInorderTraversal;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class InorderTraversal1 {
+public class BinaryTreeInorderTraversal1 {
     public List<Integer> inorderTraversal(TreeNode root) {
         Stack<TreeNode> treeNodeStack = new Stack<>();
         List<Integer> result = new ArrayList<>();
