@@ -1,4 +1,6 @@
-public class ReverseList {
+package _206_ReverseLinkedList;
+
+public class ReverseLinkedList {
     public class ListNode {
         int val;
         ListNode next;
@@ -9,7 +11,9 @@ public class ReverseList {
     }
 
     public ListNode reverseList1(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null) {
+            return head;
+        }
         ListNode boot = reverseList(head.next);
         head.next.next = head;
         head.next = null;
@@ -17,7 +21,9 @@ public class ReverseList {
     }
 
     public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null) {
+            return head;
+        }
         ListNode current = head;
         ListNode prev = null;
         while (current != null) {
