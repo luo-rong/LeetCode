@@ -26,10 +26,6 @@ public class GroupAnagrams {
             }
             strHashMap.get(strHashCode).add(str);
         }
-        List<List<String>> anagramsGroup = new ArrayList<>();
-        for (HashMap.Entry<String, List<String>> entry : strHashMap.entrySet()) {
-            anagramsGroup.add(entry.getValue());
-        }
-        return anagramsGroup;
+        return new ArrayList<>(strHashMap.values());    // good!
     }
 }
