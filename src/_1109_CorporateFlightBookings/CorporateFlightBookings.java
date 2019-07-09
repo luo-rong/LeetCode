@@ -1,4 +1,4 @@
-package _5118_CorporateFlightBookings;
+package _1109_CorporateFlightBookings;
 
 public class CorporateFlightBookings {
     public int[] corpFlightBookings(int[][] bookings, int n) {
