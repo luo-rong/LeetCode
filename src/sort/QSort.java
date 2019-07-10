@@ -7,7 +7,7 @@ public class QSort {
         nums[j] = temp;
     }
 
-    private void qsort(int begin, int end, int[] nums) {
+    public void qSort(int begin, int end, int[] nums) {
         if (end > begin) {
             int l = begin, r = end;
             while (l < r) {
@@ -18,15 +18,15 @@ public class QSort {
                 }
             }
             exchange(begin, l, nums);
-            qsort(begin, l - 1, nums);
-            qsort(l + 1, end, nums);
+            qSort(begin, l - 1, nums);
+            qSort(l + 1, end, nums);
         }
     }
 
     public static void main(String[] args) {
         QSort qSort = new QSort();
         int[] nums = new int[]{9, 7, 6, 4, 2, 1, 0};
-        qSort.qsort(0, nums.length - 1, nums);
+        qSort.qSort(0, nums.length - 1, nums);
         for (int num : nums) {
             System.out.print(num + ", ");
         }
