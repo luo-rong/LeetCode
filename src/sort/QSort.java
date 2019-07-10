@@ -1,7 +1,7 @@
 package sort;
 
 public class QSort {
-    private void exchange(int i, int j, int[] nums) {
+    private void swap(int i, int j, int[] nums) {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
@@ -14,10 +14,10 @@ public class QSort {
                 while (l < r && nums[r] >= nums[begin]) --r;
                 while (l < r && nums[l] <= nums[begin]) ++l;
                 if (l < r) {
-                    exchange(l, r, nums);
+                    swap(l, r, nums);
                 }
             }
-            exchange(begin, l, nums);
+            swap(begin, l, nums);
             qSort(begin, l - 1, nums);
             qSort(l + 1, end, nums);
         }
