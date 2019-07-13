@@ -1,4 +1,4 @@
-package WeeklyContest143;
+package WeeklyContest.WeeklyContest143;
 
 import java.util.ArrayList;
 import java.util.List;

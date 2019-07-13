@@ -1,4 +1,4 @@
-package WeeklyContest111;
+package WeeklyContest.WeeklyContest111;
 
 public class T1 {
     public boolean validMountainArray(int[] A) {

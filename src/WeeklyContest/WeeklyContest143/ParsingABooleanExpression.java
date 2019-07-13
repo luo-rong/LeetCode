@@ -1,4 +1,4 @@
-package WeeklyContest143;
+package WeeklyContest.WeeklyContest143;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package WeeklyContest111;
+package WeeklyContest.WeeklyContest111;
 
 public class T2 {
     public int minDeletionSize(String[] A) {

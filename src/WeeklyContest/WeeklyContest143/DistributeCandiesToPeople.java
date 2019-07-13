@@ -1,4 +1,4 @@
-package WeeklyContest143;
+package WeeklyContest.WeeklyContest143;
 
 public class DistributeCandiesToPeople {
     public int[] distributeCandies(int candies, int num_people) {

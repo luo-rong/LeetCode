@@ -1,4 +1,4 @@
-package WeeklyContest144;
+package WeeklyContest.WeeklyContest144;
 
 public class CorporateFlightBookings {
     public int[] corpFlightBookings(int[][] bookings, int n) {

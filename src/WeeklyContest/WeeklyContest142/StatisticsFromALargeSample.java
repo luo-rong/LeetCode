@@ -1,4 +1,4 @@
-package WeeklyContest142;
+package WeeklyContest.WeeklyContest142;
 
 public class StatisticsFromALargeSample {
     public double[] sampleStats(int[] count) {

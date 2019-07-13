@@ -1,4 +1,4 @@
-package WeeklyContest141;
+package WeeklyContest.WeeklyContest141;
 
 public class DuplicateZeros {
     public void duplicateZeros(int[] arr) {

@@ -1,4 +1,4 @@
-package WeeklyContest141;
+package WeeklyContest.WeeklyContest141;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

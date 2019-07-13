@@ -1,4 +1,4 @@
-package WeeklyContest142;
+package WeeklyContest.WeeklyContest142;
 
 public class CarPooling {
     public boolean carPooling(int[][] trips, int capacity) {
